@@ -1,0 +1,261 @@
+/*
+Common
+******************************/
+
+html, 
+body {
+  height: 100%;
+
+  background-image: url(/static/img/stu.jpeg);
+  
+}
+
+.main {
+  text-align: left;
+}
+
+.main .main-header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.main .main-header .logo {
+  width: 50px;
+  margin-right: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.main .main-header h1 {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 0;
+  margin-left: 25px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+.main .main-header {
+  padding: 10px;
+  border-bottom: 1px solid rgb(235, 238, 240);
+}
+
+
+.content {
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 0 auto;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid rgba(204, 204, 204, 0.472);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.559);
+  background-color: rgba(245, 245, 245, 0.369);
+  opacity: 2;
+  padding: 20px;
+
+}
+
+/*
+Post
+******************************/
+
+.post_form {
+  background-color: #081c38;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.318);
+  padding: 16px;
+
+}
+
+
+.post_form input[type="text"] {
+  background-color: #ffffff;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #333333;
+  font-size: 16px;
+  padding: 12px 20px;
+  transition: all 0.3s ease-in-out;
+  width: 50%;
+}
+
+input[type="text"]:focus {
+  border-color: #333333;
+  outline: none;
+  
+}
+
+input[type="submit"] {
+  background-color: blue;
+  color: white;
+}
+
+.post_form textarea {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 86%;
+  border-bottom: 10px;
+  margin-top: 15px;
+}
+
+
+.posts ul {
+  padding: 0
+}
+
+.posts li {
+  position: relative;  
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 17px;
+  color: rgb(0, 0, 0);
+  /* list-style: none; */
+  
+}
+
+.posts li .menu_icon {
+  width: 20px;
+  position: absolute;
+  top: 18px;
+  right: 30px;
+}
+
+.posts li .menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    border: 1px solid rgba(125, 125, 125, 0.5);
+    background-color: white;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.posts li .menu a {
+    text-decoration: none;
+}
+
+.posts li .logo {
+  flex-basis: 15%;
+}
+
+.posts li .logo img {
+  width: 60%;
+}
+
+
+/* img#logos {
+    width: 45%;
+} */
+
+
+.posts li .name_body {
+  flex-basis: 85%;
+}
+.posts li .name_body .name {
+  font-weight: bold;
+}
+
+.posts li .name_body .datetime {
+  color: rgb(43, 43, 43);
+}
+
+/*********
+button
+**********/
+
+.btn {
+  border-radius: 15%; /* Makes the button edge round */
+  background-color: #14a8e8; /* Blue background */
+  color: white; /* White text */
+  padding: 10px 10px; /* Some padding */
+  font-size: 12px; /* Text size */
+  margin-left: 253px;
+  
+}
+
+
+.btn-gray {
+  color: white;
+  background-color: rgb(73, 73, 73);
+}
+
+.btn:hover {
+  color: rgba(255, 255, 255, 0.495);
+}
+
+a {
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+a.btn-gray {
+  color: white;
+}
+
+a:visited {
+  color: rgba(92, 92, 92, 0.55);
+}
+
+a.btn-gray:visited {
+  color: white;
+}
+
+
+
+.container {
+  padding: 1px;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  text-align: center;
+}
+
+.main .main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .main-header .logo {
+  width: 50px;
+  margin-left: 20px;
+  align-content: right;
+}
+
+.main .main-header h1 {
+  font-size: 75px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: azure;
+}
+
+
+.main .main-header {
+  padding: 20px;
+  border-bottom: 40px solid rgba(235, 238, 240, 0);
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .posts li .name_body .name {
+    font-size: 20px;
+  } }
+
+  
+
+
+
+
+
