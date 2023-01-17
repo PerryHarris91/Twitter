@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<section class="content">
+    <section class="post_form">
+        <form  method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name" value="{{post.name}}" required>
+            <textarea name="body" placeholder="Questions for the Wizard?" required>{{post.body}}</textarea>
+            <input type="file" name="image" id='images-control'>
+            {% if post.image %}
+        <div class="post-img">
+            <img src="{{post.image.url}}" alt="">
+        </div>
+        {% endif %}
+        <div class="edit-btn">
+            
+            <button class="btn" type="submit">Update</button>
+            <a href="/">
+            <button class="btn" type="button">Cancel</button>
+        </a>
+        </div>
+
+
+        </form>
+       
+    
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/posts.js' %}"></script>
+</section>
+{% endblock %}

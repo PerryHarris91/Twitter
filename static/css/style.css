@@ -44,7 +44,6 @@ body {
 
 .content {
   max-width: 600px;
-  height: 100%;
   margin: 0 auto;
   margin-top: 0 auto;
   border-left: 1px solid #ccc;
@@ -98,15 +97,23 @@ input[type="submit"] {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 86%;
-  border-bottom: 10px;
-  margin-top: 15px;
+  padding:15px;
+  margin: 14px 0;
 }
 
 
 .posts ul {
   padding: 0
 }
+.like img{
+  width: 40px;
+  margin: 0 20px;
+}
 
+.like{
+  display: flex;
+  align-items: center;
+}
 .posts li {
   position: relative;  
   display: flex;
@@ -115,6 +122,15 @@ input[type="submit"] {
   color: rgb(0, 0, 0);
   /* list-style: none; */
   
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.edit-btn button.btn{
+  margin: 0;
 }
 
 .posts li .menu_icon {
@@ -138,6 +154,7 @@ input[type="submit"] {
 
 .posts li .menu a {
     text-decoration: none;
+    color: black;
 }
 
 .posts li .logo {
@@ -238,6 +255,10 @@ a.btn-gray:visited {
   text-align: center;
   text-transform: uppercase;
   color: azure;
+}
+.post-img img{
+  width: 80%;
+  border-radius: 10px;
 }
 
 

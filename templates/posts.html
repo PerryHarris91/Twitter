@@ -5,8 +5,8 @@
             {% csrf_token %}
             <input type="text" name="name" placeholder="Your Name" required>
             <textarea name="body" placeholder="Questions for the Wizard?" required></textarea>
-            <input type="file" name="image" id='images-control'required>
-            <button class="btn" type="submit">Post</button>
+            <input type="file" name="image" id='images-control'>
+            <button class="btn" type="submit">Tweet</button>
 
         </form>
        
@@ -14,14 +14,17 @@
     </section>
     <section class="posts">
     <ul>
-        {% for post in posts %}
+        {% for post in posts reversed %}
         <li>
         <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" />
         <div class="menu">
-            <select>
+            <a href="delete/{{post.id}}/">
                 <option value="Delete">Delete</option>
+            </a>
+            <a href="edit/{{post.id}}/">
                 <option value="Edit">Edit</option>
-              </select>
+            </a>
+            
         
         </div>
         <div class="logo">
@@ -31,7 +34,19 @@
         <div class="name">{{ post.name }}</div>
         <div class="datetime">{{ post.created_at }}</div>
         <p>{{ post.body }}</p>
-        
+        {% if post.image %}
+        <div class="post-img">
+            <img src="{{post.image.url}}" alt="">
+        </div>
+        {% endif %}
+   
+        <div class="like">
+            <a href="like/{{post.id}}/">
+            <img src="{% static 'img/like.png' %}" alt="">
+        </a>
+            <p>{{post.like}}</p>
+        </div>
+         
         </div>
          </li>
          {% endfor %}
